@@ -25,7 +25,7 @@ We classify this bug as local because it is due to a removal of the “addAll”
 The user that fixed this added new tests to ensure that the function is working
 
 3. 
-To test their system, Netflix has to use chaos engineering. They want to guarantee the availability of their service under different circumstances. They have a metric to analyze and measure the Netflix service’s health. This metric is the SPS, steam per second. The engineers, in charge of chaos, know the SPS curve during 24h and they can detect an anomaly. 
+To test their system, Netflix has to use chaos engineering. They want to guarantee the availability of their service under different circumstances. They have a metric to analyze and measure the Netflix service’s health. This metric is the SPS, stream per second. The engineers, in charge of chaos, know the SPS curve during 24h and they can detect an anomaly. 
     To start a chaos engineering test, you need to define a stable state and have a control group and an experimental group. Next you introduce some variables that represent real issues like server shutdown or network disconnection. After that, you compare SPS between the 2 groups and you decide if the variables have had an impact on the Netflix system. 
     Facebook, Google, Amazon or Microsoft also use chaos engineering to test resilience of their system. For example, a metric for Amazon could be the number of sales per minute. 
 
