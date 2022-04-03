@@ -24,12 +24,13 @@ SetUniqueList.createSetBasedOnList doesn't add list elements to return value.
 We classify this bug as local because it is due to a removal of the “addAll” method which it seemed there was no reason to remove. To resolve this bug the method was added again. The user fixed a typo error at the same time on UnmodifiableListIterator.unmodifiableListIterator (previous 'UnmodifiableListIterator.umodifiableListIterator').
 The user that fixed this added new tests to ensure that the function is working
 
+3. 
 To test their system, Netflix has to use chaos engineering. They want to guarantee the availability of their service under different circumstances. They have a metric to analyze and measure the Netflix service’s health. This metric is the SPS, steam per second. The engineers, in charge of chaos, know the SPS curve during 24h and they can detect an anomaly. 
     To start a chaos engineering test, you need to define a stable state and have a control group and an experimental group. Next you introduce some variables that represent real issues like server shutdown or network disconnection. After that, you compare SPS between the 2 groups and you decide if the variables have had an impact on the Netflix system. 
     Facebook, Google, Amazon or Microsoft also use chaos engineering to test resilience of their system. For example, a metric for Amazon could be the number of sales per minute. 
 
 
-3.
+4.
 WebAssembly is safe and fast to execute, portable semantics. It brings assembly to web technologies.
 
 The fact that the language has a formal semantics means that we can automate some parts of the code so that we can assure it is running as intended.
@@ -38,7 +39,7 @@ We still need to verify the code because the specification was made by humans an
 
 
 
-4.
+5.
 The main advantage of Isabelle is that its mechanized proof brings soundness to the specification of WebAssembly. During the completion of the proof, several issues with the WebAssembly specification were discovered. These issues influenced the development of WebAssembly. This proof comes with an executable interpreter and a type checker.
 To verify the specification, the author created an interpreter following the mechanized specification, so that it can validate it and see if there is any error.
 This new specification removes the need for testing because it is mechanized, however it should be tested for the new updates of WebAssembly if they add new functionalities.
